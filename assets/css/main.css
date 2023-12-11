@@ -13,6 +13,8 @@
 
     --transition-3: all 0.3s ease;
     --transition-5: all 0.5s ease;
+
+    --p-100: 100px;
 }
 
 * {
@@ -25,7 +27,7 @@
 body {
     scroll-behavior: smooth;
     font-family: "Inter", sans-serif;
-    background-color: var(--bg-color);
+    background-color: var(--second-bg-color);
     color: var(--text-color);
 }
 
@@ -38,8 +40,12 @@ body {
         font-size: 25px;
     }
 
+    h4 {
+        font-size: 22px;
+    }
+
     p {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     a {
@@ -56,8 +62,12 @@ body {
         font-size: 20px;
     }
 
+    h4 {
+        font-size: 18px;
+    }
+
     p {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     a {
@@ -74,8 +84,8 @@ body {
         font-size: 18px;
     }
 
-    p {
-        font-size: 14px;
+    h3 {
+        font-size: 16px;
     }
 
     a {
@@ -397,3 +407,38 @@ a {
 }
 
 /* End Home */
+/* Satrt About*/
+.about .container {
+    padding-block: var(--p-100);
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.about .container img {
+    width: 550px;
+    max-width: 100%;
+}
+
+.about .container .content h2 {
+    margin-bottom: 5px;
+}
+
+.about .container .content h4 span {
+    color: var(--main-color);
+}
+
+.about .container .content p {
+    line-height: 1.6;
+    color: var(--second-color);
+    margin-block: 20px;
+}
+
+@media (max-width: 990px) {
+    .about .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* End About*/

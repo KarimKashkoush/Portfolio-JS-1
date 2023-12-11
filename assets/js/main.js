@@ -1,9 +1,11 @@
 let header = document.getElementById("header");
 document.onscroll = () => {
     if (scrollY > 250) {
-        header.style.backgroundColor = "#081b29";
+        header.style.backgroundColor = "#090516";
+        header.style.boxShadow = "0 -5px 20px -5px white";
     } else {
         header.style.backgroundColor = "transparent";
+        header.style.boxShadow = "none";
     }
 };
 // =============== //
