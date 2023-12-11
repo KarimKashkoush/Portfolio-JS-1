@@ -40,7 +40,20 @@ body {
     font-family: "Inter", sans-serif;
     background-color: var(--second-bg-color);
     color: var(--text-color);
+    position: relative;
 }
+
+.layout::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000060;
+    z-index: 10;
+}
+
 
 @media (min-width: 786px) {
     h2 {
@@ -196,7 +209,7 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 9;
     width: 100%;
     padding-block: 20px;
     transition: var(--transition-5);
@@ -513,6 +526,7 @@ a {
     box-shadow: #b0e82d52 0px 5px 15px;
     transition: var(--transition-5);
     display: none;
+    z-index: 10;
 }
 
 .about .container .content .read_me p {

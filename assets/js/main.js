@@ -1,3 +1,4 @@
+let body = document.body
 let header = document.getElementById("header");
 document.onscroll = () => {
     if (scrollY > 250) {
@@ -44,9 +45,11 @@ let closeReadMe = document.getElementById("closeReadMe");
 
 openReadMe.onclick = function() {
     readMe.style.display = 'block';
+    body.classList.add("layout")
 }
 closeReadMe.onclick = function() {
     readMe.style.display = 'none';
+    body.classList.remove("layout")
 }
 // =============== //
 
