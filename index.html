@@ -181,11 +181,19 @@
             </div>
             <section class="form">
                 <form id="form">
-                    <input type="text" placeholder="your name" id="name">
-                    <input type="email" placeholder="e-mail" id="email">
-                    <input type="text" placeholder="write a subject" id="subject">
-                    <textarea placeholder="your message" id="textArea"></textarea>
-                    <button class="btn" id="sendForm">send a message</button>
+                    <section class="control-input">
+                        <input id="userName" type="text" placeholder="your name" class="input">
+                        <section class="error-text"></section>
+                    </section>
+                    <section class="control-input">
+                        <input id="email" type="email" placeholder="your e-mail" class="input">
+                        <section class="error-text"></section>
+                    </section>
+                    <section class="control-input">
+                        <textarea id="massege" placeholder="What is the message?"></textarea>
+                        <section class="error-text"></section>
+                    </section>
+                    <button>send</button>
                 </form>
             </section>
         </div>

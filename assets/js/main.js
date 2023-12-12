@@ -62,15 +62,98 @@ closeReadMe.onclick = function () {
 
 // End open Read Me //
 
-
 // Start Form //
-let form = document.getElementById("form");
-let nameUser = document.getElementById("name");
-let email = document.getElementById("email");
-let subject = document.getElementById("subject");
-let textArea = document.getElementById("textArea");
-// End Form //
+const form = document.getElementById("form"),
+    userName = document.getElementById("userName"),
+    email = document.getElementById("email"),
+    textArea = document.getElementById("massege");
+    
+let formvalid = false;
 
+form.addEventListener("submit", (e) => {
+    validateUserName();
+    validateEmail();
+    validatetextArea();
+    if (formvalid == false) {
+        e.preventDefault();
+    }
+});
+
+const setError = (ele, error) => {
+    const inputControl = ele.parentElement;
+    const errorDisplay = inputControl.querySelector(".error-text");
+    errorDisplay.innerHTML = error;
+    ele.classList.remove("success");
+    ele.classList.add("error");
+    formvalid = false;
+};
+
+const setSuccess = (ele) => {
+    const inputControl = ele.parentElement;
+    const errorDisplay = inputControl.querySelector(".error-text");
+    errorDisplay.innerHTML = "";
+    ele.classList.remove("error");
+    ele.classList.add("success");
+    formvalid = true;
+};
+
+const isValidEmail = (email) => {
+    const re =
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+};
+
+const validateUserName = () => {
+    const userNameValue = userName.value.trim();
+
+    if (userNameValue === "") {
+        setError(userName, "please write your name");
+    } else if (userNameValue.length <= 2) {
+        setError(
+            userName,
+            "please enter a valid name, as the name must contain more than two letters"
+        );
+    } else {
+        setSuccess(userName);
+    }
+};
+
+userName.onblur = ()=> {
+    validateUserName();
+}
+
+const validateEmail = () => {
+    const emailValue = email.value.trim();
+
+    if (emailValue === "") {
+        setError(email, "email is required");
+    } else if (!isValidEmail(emailValue)) {
+        setError(email, "provide a valid email address");
+    } else {
+        setSuccess(email);
+    }
+};
+
+email.onblur = ()=> {
+    validateEmail();
+}
+
+const validatetextArea = () => {
+    const textAreaValue = textArea.value.trim();
+
+    if (textAreaValue === "") {
+        setError(textArea, "please enter your massege");
+    } else {
+        setSuccess(textArea);
+    }
+};
+
+textArea.onblur = ()=> {
+    validatetextArea();
+}
+
+
+// End Form //
 
 // Footer //
 let years = document.querySelector("#copyRight span");
