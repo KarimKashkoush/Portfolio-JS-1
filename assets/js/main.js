@@ -55,6 +55,7 @@ openReadMe.onclick = function () {
     readMe.style.display = "block";
     body.classList.toggle("layout");
 };
+
 closeReadMe.onclick = function () {
     readMe.style.display = "none";
     body.classList.remove("layout");
@@ -67,17 +68,18 @@ const form = document.getElementById("form"),
     userName = document.getElementById("userName"),
     email = document.getElementById("email"),
     textArea = document.getElementById("massege");
-    
+let formBtn = document.getElementById("formBtn");
 let formvalid = false;
 
 form.addEventListener("submit", (e) => {
     validateUserName();
     validateEmail();
     validatetextArea();
-    if (formvalid == false) {
+    if (formvalid === false) {
         e.preventDefault();
     }
 });
+
 
 const setError = (ele, error) => {
     const inputControl = ele.parentElement;

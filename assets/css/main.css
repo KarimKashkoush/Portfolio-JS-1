@@ -432,6 +432,10 @@ a {
     .home .content .count_home {
         justify-content: center;
     }
+
+    .btn_home {
+        margin: auto;
+    }
 }
 
 @media (max-width: 850px) {
@@ -591,9 +595,11 @@ a {
     transition: var(--transition-5);
 }
 
-.services .container .boxs .box:hover {
+.services .container .boxs .box:hover,
+.services .container .boxs .box:nth-child(2) {
     outline: 2px solid var(--main-color);
     transform: scale(1.05);
+    transform: translateY(-5px);
 }
 
 .services .container .boxs .box .number_box {
@@ -619,6 +625,10 @@ a {
 }
 
 .services .container .boxs .box a:hover svg {
+    animation: arrow-right 1s infinite linear;
+}
+
+.btn_box:hover svg {
     animation: arrow-right 1s infinite linear;
 }
 
@@ -737,6 +747,7 @@ a {
     color: var(--main-color);
     transform: scale(1.2);
 }
+
 .form {
     width: 100%;
 }
@@ -765,9 +776,11 @@ a {
     height: 200px;
     color: var(--second-color);
 }
+
 .form form .input::placeholder {
     text-transform: capitalize;
 }
+
 .form form button {
     width: 100%;
     outline: 0;
@@ -782,6 +795,7 @@ a {
     cursor: pointer;
     transition: var(--transition-5);
 }
+
 .form form button:hover {
     background-color: var(--main-color);
     color: var(--text-color);
@@ -804,7 +818,7 @@ a {
     outline: 2px solid #ff253a !important;
 }
 
-.success{
+.success {
     outline: 2px solid var(--sub-color) !important;
 }
 
@@ -812,6 +826,7 @@ a {
     color: #ff253a;
     padding: 10px 15px;
 }
+
 /* End Contact */
 
 /* Satrt Footer */
