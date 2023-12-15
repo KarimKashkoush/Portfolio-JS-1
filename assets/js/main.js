@@ -1,6 +1,18 @@
 // Local Variable
 let body = document.body;
+// Scroll Top
+let scrollBtn = document.getElementById("scrollTop")
 
+window.onscroll = ()=> {
+    if (scrollY >= 200) {
+        scrollBtn.style.display = "block"
+    } else {
+        scrollBtn.style.display = "none"
+    }
+}
+scrollBtn.onclick = ()=> {
+    window.scroll(0,0)
+}
 // Start Header //
 let header = document.getElementById("header");
 document.onscroll = () => {
@@ -60,6 +72,7 @@ closeReadMe.onclick = function () {
     readMe.style.display = "none";
     body.classList.remove("layout");
 };
+
 
 // End open Read Me //
 
