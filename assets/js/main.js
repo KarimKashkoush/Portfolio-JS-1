@@ -2,18 +2,18 @@
 let body = document.body;
 
 // Scroll Top
-let scrollBtn = document.getElementById("scrollTop")
+let scrollBtn = document.getElementById("scrollTop");
 
-window.onscroll = ()=> {
+window.onscroll = () => {
     if (scrollY >= 200) {
-        scrollBtn.style.display = "block"
+        scrollBtn.style.display = "block";
     } else {
-        scrollBtn.style.display = "none"
+        scrollBtn.style.display = "none";
     }
-}
-scrollBtn.onclick = ()=> {
-    window.scroll(0,0)
-}
+};
+scrollBtn.onclick = () => {
+    window.scroll(0, 0);
+};
 // Start Header //
 let header = document.getElementById("header");
 document.onscroll = () => {
@@ -45,9 +45,7 @@ openNav.onclick = () => {
 CloseNav.onclick = () => {
     navbar.style.left = "-100%";
 };
-window.onscroll = ()=> {
-    navbar.style.left = "-100%";
-}
+
 
 let navLinks = document.querySelectorAll(".nav-links .nav-link");
 
@@ -58,6 +56,7 @@ navLinks.forEach((ele) => {
         });
         this.classList.add("active");
         navbar.style.left = "-100%";
+        navbar.style.left = '-100%'
     };
 });
 // End Nav //
@@ -76,7 +75,6 @@ closeReadMe.onclick = function () {
     readMe.style.display = "none";
     body.classList.remove("layout");
 };
-
 
 // End open Read Me //
 
@@ -132,9 +130,9 @@ const validateUserName = () => {
         setSuccess(userName);
     }
 };
-userName.onblur = ()=> {
+userName.onblur = () => {
     validateUserName();
-}
+};
 const validateEmail = () => {
     const emailValue = email.value.trim();
     if (emailValue === "") {
@@ -145,9 +143,9 @@ const validateEmail = () => {
         setSuccess(email);
     }
 };
-email.onblur = ()=> {
+email.onblur = () => {
     validateEmail();
-}
+};
 const validatetextArea = () => {
     const textAreaValue = textArea.value.trim();
     if (textAreaValue === "") {
@@ -156,9 +154,9 @@ const validatetextArea = () => {
         setSuccess(textArea);
     }
 };
-textArea.onblur = ()=> {
+textArea.onblur = () => {
     validatetextArea();
-}
+};
 // End Form //
 
 // Footer //
