@@ -1,5 +1,6 @@
 // Local Variable
 let body = document.body;
+
 // Scroll Top
 let scrollBtn = document.getElementById("scrollTop")
 
@@ -95,8 +96,6 @@ form.addEventListener("submit", (e) => {
         e.preventDefault();
     }
 });
-
-
 const setError = (ele, error) => {
     const inputControl = ele.parentElement;
     const errorDisplay = inputControl.querySelector(".error-text");
@@ -105,7 +104,6 @@ const setError = (ele, error) => {
     ele.classList.add("error");
     formvalid = false;
 };
-
 const setSuccess = (ele) => {
     const inputControl = ele.parentElement;
     const errorDisplay = inputControl.querySelector(".error-text");
@@ -114,7 +112,6 @@ const setSuccess = (ele) => {
     ele.classList.add("success");
     formvalid = true;
 };
-
 const isValidEmail = (email) => {
     const re =
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -135,14 +132,11 @@ const validateUserName = () => {
         setSuccess(userName);
     }
 };
-
 userName.onblur = ()=> {
     validateUserName();
 }
-
 const validateEmail = () => {
     const emailValue = email.value.trim();
-
     if (emailValue === "") {
         setError(email, "email is required");
     } else if (!isValidEmail(emailValue)) {
@@ -151,26 +145,20 @@ const validateEmail = () => {
         setSuccess(email);
     }
 };
-
 email.onblur = ()=> {
     validateEmail();
 }
-
 const validatetextArea = () => {
     const textAreaValue = textArea.value.trim();
-
     if (textAreaValue === "") {
         setError(textArea, "please enter your massege");
     } else {
         setSuccess(textArea);
     }
 };
-
 textArea.onblur = ()=> {
     validatetextArea();
 }
-
-
 // End Form //
 
 // Footer //
