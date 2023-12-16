@@ -44,6 +44,9 @@ openNav.onclick = () => {
 CloseNav.onclick = () => {
     navbar.style.left = "-100%";
 };
+window.onscroll = ()=> {
+    navbar.style.left = "-100%";
+}
 
 let navLinks = document.querySelectorAll(".nav-links .nav-link");
 

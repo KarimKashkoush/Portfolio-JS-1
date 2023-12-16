@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <!-- Font Awesome Css -->
     <link rel="stylesheet" href="assets/css/all.css" />
+    <!-- Aos Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- google font -->
     <link
         href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Orbitron:wght@700&display=swap"
@@ -54,7 +56,7 @@
     <!-- Start Home -->
     <section class="home section" id="home">
         <section class="container">
-            <section class="content">
+            <section class="content" data-aos="zoom-in-up">
                 <p>👋 Let's meet</p>
                 <h2>i'm<span> elen walker </span>web developer!</h2>
                 <section class="count_home">
@@ -79,8 +81,8 @@
     <!-- Start About -->
     <section class="about section" id="about">
         <section class="container">
-            <img src="assets/images/about.png" alt="photo" />
-            <section class="content">
+            <img src="assets/images/about.png" alt="photo" data-aos="fade-down"/>
+            <section class="content" data-aos="fade-up">
                 <h2>about me</h2>
                 <h4>a passionate <span>web developer!</span></h4>
                 <p>
@@ -143,9 +145,9 @@
     <!-- Start Services -->
     <section class="services section" id="services">
         <section class="container">
-            <h1 class="header_content">my services</h1>
+            <h1 class="header_content" data-aos="fade-down">my services</h1>
             <section class="boxs">
-                <section class="box">
+                <section class="box" data-aos="zoom-in-up">
                     <h2 class="number_box">01</h2>
                     <h2 class="name_box">web design</h2>
                     <p>
@@ -158,7 +160,7 @@
                         read more <i class="fa-solid fa-arrow-right"></i>
                     </section>
                 </section>
-                <section class="box">
+                <section class="box" data-aos="zoom-in-up">
                     <h2 class="number_box">02</h2>
                     <h2 class="name_box">UI / UX</h2>
                     <p>
@@ -171,7 +173,7 @@
                         read more <i class="fa-solid fa-arrow-right"></i>
                     </section>
                 </section>
-                <section class="box">
+                <section class="box" data-aos="zoom-in-up">
                     <h2 class="number_box">03</h2>
                     <h2 class="name_box">adobe photoShop</h2>
                     <p>
@@ -217,7 +219,7 @@
     <!-- Satrt Contact -->
     <section class="contact section">
         <section class="container">
-            <section class="content" id="contact">
+            <section class="content" id="contact" data-aos="fade-down">
                 <p>content me</p>
                 <h1>lets discuss your project</h1>
                 <ul>
@@ -232,7 +234,7 @@
                     </li>
                 </ul>
             </section>
-            <section class="form">
+            <section class="form" data-aos="fade-up">
                 <form id="form">
                     <section class="control-input">
                         <input id="userName" type="text" placeholder="your name" class="input" />
@@ -261,6 +263,14 @@
     <script src="assets/js/all.js"></script>
     <!-- Js file -->
     <script src="assets/js/main.js"></script>
+    <!-- Aos Animation -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 400,
+            duration: 1400,
+        });
+    </script>
 </body>
 
 </html>
